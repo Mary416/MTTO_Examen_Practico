@@ -7,9 +7,9 @@ import workflow.*;
 class Principal {
 	public static void main(String[] args)
 	{
-		Store tienda = new Store();
-		
-		Registro registro = tienda.getPOST();
+		ProductCatalog productCatalog = new ProductCatalog();
+		Registro registro = new Registro( productCatalog );
+
 
 		Iniciarventa(registro);
 

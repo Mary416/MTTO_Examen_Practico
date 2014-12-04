@@ -2,25 +2,27 @@ package prueba;
 
 import static org.junit.Assert.*;
 import junit.framework.Assert;
-import org.junit.Before;
 
+import org.junit.Before;
 import org.junit.Test;
 
+import domain.ProductCatalog;
 import workflow.Registro;
-import domain.Store;
+
 
 
 public class TestTestPost {
 
-	Store tienda ;
+	ProductCatalog  productCatalog;
 	Registro registro ;
 	float total,cambio;
 	
 	@Before
 	public void setUp() throws Exception
 	{
-		tienda = new Store();
-		registro = tienda.getPOST();
+		 productCatalog = new ProductCatalog();
+		registro = new Registro( productCatalog );
+
 		
 		registro.EnterItem(1,1);
 
