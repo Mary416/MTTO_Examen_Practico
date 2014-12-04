@@ -11,14 +11,7 @@ class Principal {
 		
 		Registro registro = tienda.getPOST();
 
-		System.out.println("Capturo 1 articulo (COD=1) de a 100 pesos");
-		registro.EnterItem(1,1);
-
-		System.out.println("Capturo 2 articulos (COD=2) de a 200 pesos");
-		registro.EnterItem(2,2);
-
-		System.out.println("Capturo 1 articulo (COD=1) de a 100 pesos");
-		registro.EnterItem(1,1);
+		Iniciarventa(registro);
 
 		System.out.println("Finalizo la venta...");
 		registro.endSale();
@@ -29,5 +22,16 @@ class Principal {
 		registro.makePayment(650);
 
 		System.out.println("La feria es: ..."+ registro.getSale().getBalance());
+	}
+
+	private static void Iniciarventa(Registro registro) {
+		System.out.println("Capturo 1 articulo (COD=1) de a 100 pesos");
+		registro.EnterItem(1,1);
+
+		System.out.println("Capturo 2 articulos (COD=2) de a 200 pesos");
+		registro.EnterItem(2,2);
+
+		System.out.println("Capturo 1 articulo (COD=1) de a 100 pesos");
+		registro.EnterItem(1,1);
 	}
 }
