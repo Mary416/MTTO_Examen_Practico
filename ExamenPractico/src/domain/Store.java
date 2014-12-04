@@ -4,7 +4,7 @@ import workflow.*;
 
 public class Store {
 	private ProductCatalog productCatalog = new ProductCatalog();
-	private POST post = new POST( productCatalog );
+	private Registro registro = new Registro( productCatalog );
 
-	public POST getPOST() { return post; }
+	public Registro getPOST() { return registro; }
 }

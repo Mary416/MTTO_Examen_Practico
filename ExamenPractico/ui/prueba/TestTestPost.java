@@ -6,37 +6,37 @@ import org.junit.Before;
 
 import org.junit.Test;
 
-import workflow.POST;
+import workflow.Registro;
 import domain.Store;
 
 
 public class TestTestPost {
 
 	Store tienda ;
-	POST post ;
+	Registro registro ;
 	float total,cambio;
 	
 	@Before
 	public void setUp() throws Exception
 	{
 		tienda = new Store();
-		post = tienda.getPOST();
+		registro = tienda.getPOST();
 		
-		post.EnterItem(1,1);
+		registro.EnterItem(1,1);
 
-		post.EnterItem(2,2);
+		registro.EnterItem(2,2);
 
-		post.EnterItem(1,1);
+		registro.EnterItem(1,1);
 
-		post.endSale();
-		total=post.getSale().total();
+		registro.endSale();
+		total=registro.getSale().total();
 		
 //		System.out.println("Total de la venta..."+total);
 //
 //		System.out.println("Pago con 650 pesos...");
-		post.makePayment(650);
+		registro.makePayment(650);
 		
-		cambio=post.getSale().getBalance();
+		cambio=registro.getSale().getBalance();
 //		System.out.println("La feria es: ..."+ cambio);
 		
 	}

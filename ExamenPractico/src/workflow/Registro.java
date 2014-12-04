@@ -3,11 +3,11 @@ package workflow;
 import domain.*;
 
 
-public class POST {
+public class Registro {
 	private ProductCatalog productCatalog;
 	private Sale sale;
 
-	public POST( ProductCatalog catalog )
+	public Registro( ProductCatalog catalog )
 	{
 		productCatalog = catalog;
 	}

@@ -1,18 +1,19 @@
 package domain;
 
 public class ProductSpecification {
-	private int    upc         = 0;
+	private int    idProduct         = 0;
 	private float  price       = 0;
 	private String description = "";
 
-	public ProductSpecification( int upc, float price, String description )
+	public ProductSpecification( int idProduct, float price, String description )
 		{
-		this.upc         = upc;
+		this.idProduct         = idProduct;
 		this.price       = price;
 		this.description = description;
 		}
 
-	public int getUPC() { return upc;	}
+	public int getUPC() { return idProduct;	}
 	public float getPrice() { return price; }
 	public String getDescription() { return description; }
 }
+

@@ -21,7 +21,7 @@ public class ProductCatalog {
 
   }
 
-  public ProductSpecification specification(int upc) {
-    return (ProductSpecification) productSpecifications.get(new Integer(upc));
+  public ProductSpecification specification(int idProduct) {
+    return (ProductSpecification) productSpecifications.get(new Integer(idProduct));
   }
 }
